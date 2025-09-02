@@ -22,9 +22,10 @@ export default {
     }),
     commonjs(),
     typescript({
-      tsconfig: './tsconfig.json'
+      tsconfig: './tsconfig.json',
+      jsx: 'react-jsx'
     }),
     terser()
   ],
-  external: []
+  external: ['react', 'react-dom', 'framer-motion']
 };
