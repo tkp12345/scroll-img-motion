@@ -10,7 +10,7 @@ export type Bitmap =  ImageBitmap | HTMLImageElement
 // 한 번의 시도로 이미지를 불러와 디코딩하는 함수.
 async function fetchBitmap ( url : string , signal?:AbortSignal) :Promise<Bitmap> {
      const res = await  fetch(url , {signal, credentials:"omit", cache:"force-cache"})
-     if(!res.ok) throw new Error
+     if(!res.ok) throw new Error()
      const blob = await res.blob()
 
      //브라우저가 createImageBitmap 지원하면, 그걸 사용해 고성능 ImageBitmap 생성.
@@ -32,7 +32,7 @@ function blobToImage(blob : Blob , signal?: AbortSignal) : Promise<HTMLImageElem
           const img = new Image();
 
           //CORS 안전하게 불러오기
-          img.crossOrigin = "anoymous";
+          img.crossOrigin = "";
           //이미지 디코딩을 비동기로 하여 성능 최적화
           img.decoding = "async"
 
@@ -54,7 +54,7 @@ export async function fetchBitmapWithFallback(url:string, signal?:AbortSignal):P
                const jpg = url.slice(0,-5) + ".jpg";
                return await fetchBitmap(jpg, signal);
           }
-          throw new Error
+          throw new Error()
      }
 }
 
