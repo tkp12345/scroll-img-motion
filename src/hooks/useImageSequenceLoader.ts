@@ -39,7 +39,6 @@ export const useImageSequenceLoader = (
     ) {
       const i = queueRef.current.shift()!;
       if (i < 0 || i >= imageUrls.length) continue;
-      // i = 10, 큐는 [9, 11]로 변함
 
       if (cacheRef.current.has(i) || inProgressRequestRef.current.has(i))
         continue;
