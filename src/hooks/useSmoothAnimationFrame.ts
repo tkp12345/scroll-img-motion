@@ -1,6 +1,6 @@
 //TODO remove framer-motion
-import { useRef } from "react";
-import { MotionValue, useAnimationFrame } from "framer-motion";
+import { useRef } from 'react';
+import { MotionValue, useAnimationFrame } from 'framer-motion';
 
 const SOFT_RATIO = 0.7;
 const THROTTLE_MS = 16; // 60fps 기준

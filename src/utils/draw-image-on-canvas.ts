@@ -1,5 +1,5 @@
-import type { RefObject } from "react";
-import type { Bitmap } from "./bitmap-utils";
+import type { RefObject } from 'react';
+import type { Bitmap } from './bitmap-utils';
 
 export function drawImageOnCanvas(
   canvasRef: RefObject<HTMLCanvasElement | null>,
@@ -10,7 +10,7 @@ export function drawImageOnCanvas(
 ) {
   const canvas = canvasRef.current;
   if (!canvas || !image) return;
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
   // 마지막으로 그린 인덱스와 동일하면 다시 안그림
@@ -27,11 +27,11 @@ export function drawImageOnCanvas(
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
   const iw =
-    "naturalWidth" in (image as any)
+    'naturalWidth' in (image as any)
       ? (image as any).naturalWidth
       : (image as ImageBitmap).width;
   const ih =
-    "naturalHeight" in (image as any)
+    'naturalHeight' in (image as any)
       ? (image as any).naturalHeight
       : (image as ImageBitmap).height;
 

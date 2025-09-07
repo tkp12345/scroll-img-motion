@@ -1,6 +1,6 @@
 // 캔버스 픽셀 버퍼는 여기서만 리셋(DPR 반영). 매 프레임 리셋 금지.
 
-import { RefObject, useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from 'react';
 
 export function useCanvasResize(
   canvasRef: RefObject<HTMLCanvasElement | null>,
@@ -28,8 +28,8 @@ export function useCanvasResize(
     };
 
     update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
   }, [canvasRef]);
 
   return size;
