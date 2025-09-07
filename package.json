@@ -1,6 +1,6 @@
 {
   "name": "scroll-img-motion",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library for smooth scroll-triggered image transitions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -57,7 +57,7 @@
     "@rollup/plugin-terser": "^0.4.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
+    "react": ">=18.0.0",
     "framer-motion": ">=10.0.0"
   }
 }
