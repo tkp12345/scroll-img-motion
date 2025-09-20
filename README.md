@@ -1,6 +1,10 @@
 # scroll-img-motion
 
-A React library for smooth scroll-triggered image sequence animations using Canvas and Framer Motion.
+[![npm version](https://img.shields.io/npm/v/scroll-img-motion.svg)](https://www.npmjs.com/package/scroll-img-motion)
+[![npm downloads](https://img.shields.io/npm/dm/scroll-img-motion.svg)](https://www.npmjs.com/package/scroll-img-motion)
+
+A React library for smooth scroll-triggered image sequence animations using Canvas and Framer Motion.  
+👉 [View on npm](https://www.npmjs.com/package/scroll-img-motion)
 
 ## Features
 
