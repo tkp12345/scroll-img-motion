@@ -1,6 +1,6 @@
 {
   "name": "scroll-img-motion",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A library for smooth scroll-triggered image transitions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
