@@ -18,7 +18,8 @@ export default {
   ],
   plugins: [
     nodeResolve({
-      browser: true
+      browser: true,
+      preferBuiltins: false
     }),
     commonjs(),
     typescript({
@@ -27,5 +28,7 @@ export default {
     }),
     terser()
   ],
-  external: ['react', 'react-dom', 'framer-motion']
+  external: (id) => {
+    return id === 'react' || id === 'react-dom' || id === 'framer-motion' || id.startsWith('react/') || id.startsWith('react-dom/');
+  }
 };
